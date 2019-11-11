@@ -6,7 +6,7 @@ namespace MagyarNameSorter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("TESTING GIT");
         }
     }
 }
