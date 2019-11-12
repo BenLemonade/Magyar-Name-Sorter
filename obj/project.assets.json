@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\BenLemonade\\.nuget\\packages\\": {}
+    "C:\\Users\\Adam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Y:\\Visual Studio for C#\\Projects\\Homework2-MagyarNameSorter\\MagyarNameSorter\\MagyarNameSorter.csproj",
+      "projectUniqueName": "C:\\Visual Studio for C#\\Projects\\Magyar-Name-Sorter\\MagyarNameSorter.csproj",
       "projectName": "MagyarNameSorter",
-      "projectPath": "Y:\\Visual Studio for C#\\Projects\\Homework2-MagyarNameSorter\\MagyarNameSorter\\MagyarNameSorter.csproj",
-      "packagesPath": "C:\\Users\\BenLemonade\\.nuget\\packages\\",
-      "outputPath": "Y:\\Visual Studio for C#\\Projects\\Homework2-MagyarNameSorter\\MagyarNameSorter\\obj\\",
+      "projectPath": "C:\\Visual Studio for C#\\Projects\\Magyar-Name-Sorter\\MagyarNameSorter.csproj",
+      "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+      "outputPath": "C:\\Visual Studio for C#\\Projects\\Magyar-Name-Sorter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\BenLemonade\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
