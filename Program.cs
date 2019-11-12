@@ -14,10 +14,10 @@ namespace MagyarNameSorter
         {
             //Read in all of the lines of 'Names.txt'.
             string[] lines = System.IO.File.ReadAllLines
-            (@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Names.txt");
+            (@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Names.txt");
 
             //Clear the Sorted.txt file of any text.
-            File.WriteAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", String.Empty);
+            File.WriteAllText(@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Sorted.txt", String.Empty);
 
             //Create dictionary 'First Letter Dicitonary', in order to sort all names by first character.
             Dictionary<string, List<string>> FirstLetterDictionary = new Dictionary<string, List<string>>();
@@ -44,7 +44,7 @@ namespace MagyarNameSorter
                 Console.Write(key + " : " + FirstLetterDictionary[key].Count + " names" + System.Environment.NewLine + System.Environment.NewLine);
 
                 //Write the key name + the key count with two additional lines to file 'Sorted.txt'.
-                File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", key + " : " + FirstLetterDictionary[key].Count + " names" + Environment.NewLine + Environment.NewLine);
+                File.AppendAllText(@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Sorted.txt", key + " : " + FirstLetterDictionary[key].Count + " names" + Environment.NewLine + Environment.NewLine);
 
                 //For each item in the current key/category:
                 foreach (string item in FirstLetterDictionary[key])
@@ -53,7 +53,7 @@ namespace MagyarNameSorter
                     Console.Write("{0}, ", item);
 
                     //Write the current item, with a comma separator to the file 'Sorted.txt'.
-                    File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", item + ", ");
+                    File.AppendAllText(@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Sorted.txt", item + ", ");
                 }
 
                 //Add three new lines to the bottom of the last entry in the console.
@@ -62,9 +62,9 @@ namespace MagyarNameSorter
                 Console.WriteLine("");
 
                 //Add three new lines to the bottom of the last entry in  the file 'Sorted.txt'.
-                File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", System.Environment.NewLine);
-                File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", System.Environment.NewLine);
-                File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", System.Environment.NewLine);
+                File.AppendAllText(@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Sorted.txt", System.Environment.NewLine);
+                File.AppendAllText(@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Sorted.txt", System.Environment.NewLine);
+                File.AppendAllText(@"C:\Visual Studio for C#\Projects\Magyar-Name-Sorter\Sorted.txt", System.Environment.NewLine);
 
             }
             Console.ReadKey();            
