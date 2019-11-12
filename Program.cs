@@ -67,7 +67,16 @@ namespace MagyarNameSorter
                 File.AppendAllText(@"Y:\Visual Studio for C#\Projects\Homework2-MagyarNameSorter\MagyarNameSorter\Sorted.txt", System.Environment.NewLine);
 
             }
-            Console.ReadKey();            
+            Console.ReadKey();
+
+            //////Attempting to write the information to a new file in a format that R can read in as a table://////
+
+            //For each key/category in 'First Letter Dictionary':
+            foreach (string key in FirstLetterDictionary.Keys)
+            {
+
+            }
+
         }
     }
 }
