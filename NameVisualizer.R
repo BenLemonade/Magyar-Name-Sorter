@@ -11,14 +11,16 @@ setwd("Y:/Visual Studio for C#/Projects/Homework2-MagyarNameSorter/MagyarNameSor
 ## Install necessary libraries ##
 install.packages("plyr")
 install.packages("tidyverse")
+install.packages("xlsx")
 
 ## Call necessary libraries ##
 library(plyr)
-library(tidyverse)
+library(xlsx)
 
 ## Create needed variables ##
 SortedNames <- NULL
 LetterCategories <- NULL
+OrderedCols <- NULL
 
 ################################################ Importing and cleaning info from 'Sorted.txt' #################################################
 
@@ -31,31 +33,23 @@ SortedNames <- read.delim("Sorted.txt", header = FALSE, sep = ",", )
 
 ## Transpose the chart so that the data is now displayed in columns, and store back into 'SortedNames' ##
 SortedNames <- t(SortedNames)
-summary(SortedNames)	#Gives summary of matrix
+summary(SortedNames)		#Gives summary of matrix
 
 ## Gets all of the items in the first row as 'Letter Categories', then only selects every other, storing only the "X : #" ##
 LetterCategories <- c(SortedNames[1,])
 LetterCategories <- LetterCategories[c(TRUE,FALSE)]
-print(LetterCategories)
+print(LetterCategories)		#Prints vector of category names (soon to be col names)
 
-
-dat2 <- read.csv("data2.csv", header=T, na.strings=c("","NA"))
-
-
-ColCounter <- c("V1","V3","V5","V6","V7","V8","V9","V11","V13","V15","V17","V19","V21","V23","V25","V27","V29","V31","V33","V35","V37","V39","V41","V43","V45","V47","V49","V51","V53","V55","V57","V59","V61")
-
+## Stores the matrix into 'Ordered Cols', and deletes every odd column (empty) ##
 OrderedCols <- SortedNames
-OrderedCols <- OrderedCols[,!names(OrderedCols) %in% ColCounter]
-
+OrderedCols <- OrderedCols[,-c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61)]
 summary(OrderedCols)
 
-print(OrderedCols)
-dim(OrderedCols)
-class(OrderedCols)
+write.xlsx(OrderedCols, )
 
-OrderedCols <- SortedNames
+OrderedCols[1,3]
 
-
+##dat2 <- read.csv("data2.csv", header=T, na.strings=c("","NA"))
 
 
 
