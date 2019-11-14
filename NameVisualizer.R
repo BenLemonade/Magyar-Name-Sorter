@@ -22,6 +22,9 @@ SortedNames <- NULL
 LetterCategories <- NULL
 OrderedCols <- NULL
 
+i <- NULL
+j <- NULL
+
 ################################################ Importing and cleaning info from 'Sorted.txt' #################################################
 
 
@@ -42,8 +45,6 @@ OrderedCols <- SortedNames
 OrderedCols <- OrderedCols[,-c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61)]
 summary(OrderedCols)
 
-i <- 5
-j <- 10
 
 ## For each column in matrix 'Ordered Cols': ##
 for (i in 1:length(OrderedCols[i]))
@@ -51,10 +52,10 @@ for (i in 1:length(OrderedCols[i]))
 	## For each cell in current column: ##
 	for (j in 1:length(OrderedCols$i[j]))
 	{
-		## If cell has " : 1" in the string:
+		## If cell has " : 1" in the string: ##
 		if (as.str(substr(OrderedCols$i[j]))) == ": 1"
 		{
-			## Split string at ':1' and return first substring. 
+			## Split string at ':1' and return first substring. ##
 			str_split(OrderedCols$i[j], ":1", n = 1) 
 		}
 	}
