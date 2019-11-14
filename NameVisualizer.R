@@ -58,8 +58,13 @@ for (i in 1:length(OrderedCols[i]))
 			## Split string at ':1' and return first substring. ##
 			str_split(OrderedCols$i[j], ":1", n = 1) 
 		}
+		## Else the cell is empty: ##
+		else ()
+		{
+			## Replace " " with NA.
+			
+		}
 	}
-
 }
 
 
