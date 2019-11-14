@@ -69,13 +69,8 @@ namespace MagyarNameSorter
             }
             Console.ReadKey();
 
-            //////Attempting to write the information to a new file in a format that R can read in as a table://////
-
-            //For each key/category in 'First Letter Dictionary':
-            foreach (string key in FirstLetterDictionary.Keys)
-            {
-                //BenLemonade
-            }
+            //Print all the key names to check if they are unique
+            Console.Write(FirstLetterDictionary.Keys + System.Environment.NewLine);
 
         }
     }
