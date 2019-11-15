@@ -31,7 +31,7 @@ j <- NULL
 ## Read in 'Sorted.txt' and store into 'SortedNames' (This imports the data with the names in rows horizontally). Transpose the matrix so data is in columns, not rows. ##
 SortedNames <- read.delim("Sorted.txt", header = FALSE, sep = ",", )
 SortedNames <- t(SortedNames)
-summary(SortedNames)		#Gives summary of matrix
+head(SortedNames)		#Gives top few rows of matrix
 
 
 ## Gets all of the items in the first row as 'Letter Categories', then only selects every other, storing only the "X : #" ##
@@ -43,30 +43,25 @@ print(LetterCategories)		#Prints vector of category names (soon to be col names)
 ## Stores the matrix into 'Ordered Cols', and deletes every odd column (empty) ##
 OrderedCols <- SortedNames
 OrderedCols <- OrderedCols[,-c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61)]
-summary(OrderedCols)
+head(OrderedCols)	#Gives summary of matrix
 
 dim(OrderedCols)
-head(OrderedCols)
 
 ## For each column in matrix 'Ordered Cols': ##
-for (i in 1:length(OrderedCols[i]))
+for (i in 1:length(OrderedCols))
 {
 	## For each cell in current column: ##
-	for (j in 1:length(OrderedCols$i[j]))
+	for (j in 1:length(OrderedCols[i,]))
 	{
-		## If cell has " : 1" in the string: ##
-		if (as.str(substr(OrderedCols$i[j])) == ": 1")
+		## If cell has "" (empty): ##
+		## if ((OrderedCols[i,j]) == "") ##
+		if is.null(OrderedCols[i,j])
 		{
-			## Split string at ':1' and return first substring. ##
-			str_split(OrderedCols$i[j], ":1", n = 1) 
-		}
-		## Else the cell is empty: ##
-		{
-			## Replace " " with NA.
+			## Store NA into current cell ##
+			OrderedCols[i,j] <- NA 
 		}
 	}
 }
-
 
 
 
