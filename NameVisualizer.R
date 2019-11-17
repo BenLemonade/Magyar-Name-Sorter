@@ -1,9 +1,3 @@
-## NEED TO INSTALL APPROPRIATE PACKAGES: ##
-install.packages("plyr")
-install.packages("tidyverse")
-install.packages("xlsx")
-install.packages("RColorBrewer")
-
 ################################################################################################################################################
 ########################################## Processing and visualizing data from 'Magyar Names Sorter' ##########################################
 ################################################################################################################################################
@@ -80,8 +74,8 @@ letters
 
 pdf(file = "AmountOfNamesBARplot.pdf")
 barplot(
-	numbers, 														## A vector of values in integers to be displayed as bars ##
-	names.arg = letters, 												## A vector of values to be displayed as labeles for the bars ##	
+	numbers,														## A vector of values in integers to be displayed as bars ##
+	names.arg = letters,												## A vector of values to be displayed as labeles for the bars ##	
 	xlab = "Starting Letter",											## The label for the x-axis ##
 	ylab = "Number of Names",											## The label for the y-axis ##
 	col = rainbow(31),												## The color of the bars ##
