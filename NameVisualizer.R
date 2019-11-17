@@ -73,29 +73,34 @@ letters
 
 
 pdf(file = "AmountOfNamesBARplot.pdf")
+
 barplot(
 	numbers,														## A vector of values in integers to be displayed as bars ##
 	names.arg = letters,												## A vector of values to be displayed as labeles for the bars ##	
 	xlab = "Starting Letter",											## The label for the x-axis ##
 	ylab = "Number of Names",											## The label for the y-axis ##
-	col = rainbow(31),												## The color of the bars ##
-	border = "Blue",													## The color of the bar borders ##
+	col = heat.colors(31),												## The color of the bars ##
+	border = "Black",													## The color of the bar borders ##
 	main = "Amount of Hungarian Names by Starting Letter",						## The title of the chart ##
 	xpd = FALSE,													## The bars are NOT allowed to be taller than the y-axis (labels) ##
 	horiz = FALSE,													## Defines if the bars are displayed horizontally or not ##
 	axes = TRUE,													## Draws verticle axis (or horizontal if horiz=T) ##
 	cex.axis = 1,													## Size of y-label text (more specifically numeric labels) ##
 	cex.names = .5,													## Size of x-label text (more specifically character labels) ##
-	space = .33,													## The amount of space between bars, as a fraction of the overall width of a bar ##
+	space = 0,														## The amount of space between bars, as a fraction of the overall width of a bar ##
 	
 	#density = c(100),												## The 'density' of the color fill od the bars (line-shading) ##
 	#angle = 25,													## The angles of the line-shading defined by 'density' ##
 	#col = c("red","orange","yellow"),
-	#col = brewer.pal(n=8, name="YlOrRd"),
 	#xlim = c(1),
 	#width = c(20),
 	#ann = TRUE,
 )
+#axis(2, at = c(0:500), labels = NULL, tck = 0, lty = 1, lwd = 2, las = 0)
+for (i in 1:length(numbers)){
+	text(i, (numbers[i] + 9), numbers[i], adj = 1.1, cex = 1)
+}
+
 dev.off()
 
 
