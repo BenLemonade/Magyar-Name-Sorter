@@ -5,7 +5,7 @@ A set of scripts to import a .txt of names (Names.txt) that are listed line-by-l
 ## R-SCRIPT IMPORTANT NOTES: ##
 
 !! IF IT IS THE FIRST TIME RUNNING THIS SCRIPT, PLEASE INSTALL THE FOLLOWING LIBRARIES BY RUNNING THE FOLLOWING COMMANDS IN THE R-CONSOLE !!
-## NEED TO INSTALL PACKAGES: ##
+# NEED TO INSTALL PACKAGES: #
 >install.packages("plyr")
 >install.packages("tidyverse")
 >install.packages("xlsx")
