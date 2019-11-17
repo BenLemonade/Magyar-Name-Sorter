@@ -96,9 +96,10 @@ barplot(
 	#width = c(20),
 	#ann = TRUE,
 )
-#axis(2, at = c(0:500), labels = NULL, tck = 0, lty = 1, lwd = 2, las = 0)
-for (i in 1:length(numbers)){
-	text(i, (numbers[i] + 9), numbers[i], adj = 1.1, cex = 1)
+#axis(2, at = c(0:500), labels = NULL, tck = 0, lty = 1, lwd = 2, las = 0)				## Will eventually add a custom x-axis which will label to the highest value (465) ##
+par(mar = c(2,2,2,2))													## Adds margins to the plot so that the label '465' appears ##
+for (i in 1:length(numbers)){												## For the length of 1 to the nth value of numbers: ##
+	text(i, (numbers[i] + 9), numbers[i], adj = 1.1, cex = .7)						## Add a label at the top of the bar ##
 }
 
 dev.off()
