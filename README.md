@@ -28,8 +28,13 @@ There is exactly 1 NULL line between the first two lines of info, follwed by two
 
 I feel this needed to be said, because the data structure isn't completely standard and it took me some time myself to understand how exactly R had built the matrix from the .txt. Some useful functions for understanding the structure of the matrix are:
 >dim(matrix)		--Gives the dimensions of a table as (rows, cols)
+
 >summary(data.type)	--Gives a summary of the data type variable
+
 >head(matrix)		--Prints the first few rows of a table in
+
 >matrix[[x]][y]		--Prints the Yth element of the Xth 'key'/'category'/'column' of a matrix
+
 >array[x]		--Prints the Xth element of an array
+
 >data.type		--Prints the data type
