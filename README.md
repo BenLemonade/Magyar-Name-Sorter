@@ -12,9 +12,11 @@ A set of scripts to import a .txt of names (Names.txt) that are listed line-by-l
 
 The R script was designed to read information specifically from 'Sorted.txt' in the project file. The information is presented in there as such:
 "
+
 Ü : 6 names
 
 Üdvöske, Üdvöske, Üne, Ünige, Ünőke, Üllő, 
+
 
 
 "
